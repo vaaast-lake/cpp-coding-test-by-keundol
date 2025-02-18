@@ -95,7 +95,7 @@ void solve()
 
   if (sum == 100)
   {
-    cout << "\nDebuging Vector test\n\n";
+    // cout << "\nDebuging Vector test\n\n";
     sort(a, a + 7);
     cout << "\n\nans\n";
     for (int i = 0; i < r; i++)
@@ -116,31 +116,31 @@ void makePermutation(int n, int r, int depth)
 {
   if (r == depth)
   {
-    for (int i = 0; i < r; i++)
-    {
-      cout << a[i] << " ";
-    }
-    cout << '\n';
-    // print();
+    print();
     solve();
     return;
   }
   for (int i = depth; i < n; i++)
   {
+    cout << "\nswap 1" << "[" << i << "," << depth << "]";
     swap(a[i], a[depth]);
     makePermutation(n, r, depth + 1);
     swap(a[i], a[depth]);
+    cout << "\nswap 2" << "[" << i << "," << depth << "]";
   }
   return;
 }
 
 int main()
 {
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+
   for (int i = 0; i < n; i++)
   {
     cin >> a[i];
   }
-  cout << "\n\nDebuging Vector test\n\n";
+  // cout << "\n\nDebuging Vector test\n\n";
   makePermutation(n, r, 0);
   return 0;
 }
