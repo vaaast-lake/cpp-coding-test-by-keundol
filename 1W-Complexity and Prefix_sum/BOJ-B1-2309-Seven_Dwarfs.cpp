@@ -97,9 +97,9 @@ void solve()
   {
     // cout << "\nDebuging Vector test\n\n";
     sort(a, a + 7);
-    cout << "\n\nans\n";
+    // cout << "\n\nans\n";
     for (int i = 0; i < r; i++)
-      cout << a[i] << "\n";
+      // cout << a[i] << "\n";
     // main 함수를 종료
     exit(0);
   }
@@ -107,6 +107,7 @@ void solve()
 
 void print()
 {
+  cout << '\n';
   for (int i = 0; i < r; i++)
     cout << a[i] << " ";
   cout << '\n';
@@ -139,8 +140,11 @@ int main()
   for (int i = 0; i < n; i++)
   {
     cin >> a[i];
+    cout << a[i] << " ";
   }
+  cout << "\n";
   // cout << "\n\nDebuging Vector test\n\n";
+
   makePermutation(n, r, 0);
   return 0;
 }
